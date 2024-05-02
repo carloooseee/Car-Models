@@ -1,0 +1,24 @@
+*{
+    /* border: 1px solid black; */
+    margin: 0;
+}
+body{
+    margin: 0;
+}
+header{
+    position: relative;
+}
+nav{
+    position: absolute;
+    top: 0px;
+}
+.imageFront{
+    height: 70vh;
+    object-fit: cover
+}
+
+
+/*temporary*/
+input, select{
+    padding: 10px;
+}
