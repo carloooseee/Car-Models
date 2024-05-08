@@ -12,9 +12,9 @@
 <body>
     <!--Header-->
     <header>
-        <!-- <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
+              <a class="navbar-brand" href="#">Model Showcase</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -22,8 +22,7 @@
                 <div class="navbar-nav">
                   <a class="nav-link active" aria-current="page" href="#">Home</a>
                   <a class="nav-link" href="#">Features</a>
-                  <a class="nav-link" href="#">Pricing</a>
-                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                  <a class="nav-link" href="#">API Information</a>
                 </div>
               </div>
             </div>
@@ -53,21 +52,34 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
-          </div> -->
+          </div> 
     </header>
     <!--Main Content-->
     <main>
-        <h1>Select a Car</h1>
-        <div>
-            <form id="formSelection">
-                <select id="optionVehicle">
-                    <option hidden>Select a Vehicle number</option>
-                </select>
-                <input type="submit">
-            </form>
+      <div class="mainContainer">
+        <div class="subContainer">
+          <div class="modelContainer">
+            <img class="modelCar" src="media/modelCar.png" alt="Model Car">
+            <h1>Show car model information</h1>
+            <p></p>
+              <form id="formSelection">
+                  <select id="optionVehicle">
+                      <option hidden>Select a Vehicle</option>
+                  </select>
+                  <input type="submit">
+              </form>
+          </div>
+          <div id="vehicleResult">
+          </div>
         </div>
-        <div id="vehicleResult">
-        </div>
+         <!--Content-->
+         <div class="subContainer">
+            <h1>Ride with class!</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+         </div>       
+      </div>
+     
+        
     </main>
     <!--Footer-->
     <footer></footer>

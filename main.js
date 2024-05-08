@@ -2,58 +2,26 @@
 
 let vehicleResult = document.getElementById('vehicleResult');
 
-// let optionVehicle = document.getElementById('optionVehicle');
-
-// for (let i = 9000; i <= 9100; i++) {
-//     let optionSelect = document.createElement('option');
-//     optionSelect.innerText = `Vehicle ${i}`;
-//     optionSelect.value = i;
-//     optionVehicle.appendChild(optionSelect);
-//     // Fetch API for each vehicle number
-//     fetch(`https://www.fueleconomy.gov/ws/rest/vehicle/${i}`)
-//         .then(response => response.text())
-//         .then(data => {
-//             let parser = new DOMParser();
-//             let xmlDoc = parser.parseFromString(data, "text/xml");
-//             let make = xmlDoc.getElementsByTagName('make')[0].textContent;
-//             let model = xmlDoc.getElementsByTagName("model")[0].textContent;
-//             optionSelect.innerText = `Vehicle ${i} - ${make} ${model}`;
-//         })
-//         .catch(error => {
-//             console.error(`${error}`);
-//         });
-// };
-
-let optionVehicle = document.getElementById('optionVehicle');
-let uniqueModels = new Set();
-
-for (let i = 40000 ; i <= 40100; i++) {
+for (let i = 0; i <= 50; i++) {
+    let optionSelect = document.createElement('option');
+    optionSelect.innerText = `Vehicle ${i}`;
+    optionSelect.value = i;
+    optionVehicle.appendChild(optionSelect);
+    // Fetch API for each vehicle number
     fetch(`https://www.fueleconomy.gov/ws/rest/vehicle/${i}`)
         .then(response => response.text())
         .then(data => {
             let parser = new DOMParser();
             let xmlDoc = parser.parseFromString(data, "text/xml");
-
             let make = xmlDoc.getElementsByTagName('make')[0].textContent;
             let model = xmlDoc.getElementsByTagName("model")[0].textContent;
-
-            let modelName = `${make} ${model}`;
-
-            // Check if model is unique
-            if (!uniqueModels.has(modelName)) {
-                // Create option element with vehicle number and make/model
-                let optionSelect = document.createElement('option');
-                optionSelect.innerText = `Vehicle ${i} - ${modelName}`;S
-                optionSelect.value = i;
-                optionVehicle.appendChild(optionSelect);
-                // Add model name to the set of unique models
-                uniqueModels.add(modelName);
-            }
+            optionSelect.innerText = `Vehicle ${i} - ${make} ${model}`;
         })
         .catch(error => {
             console.error(`${error}`);
         });
 };
+
 
 
 let formSelection = document.getElementById('formSelection');
